@@ -172,7 +172,7 @@
             $.getJSON("https://spreadsheets.google.com/feeds/list/18pmroG8VvhjtAFXFwC58UTiMnPGsg6YZEAIyc7OHk0E/od6/public/values?alt=json", function (data) {
 
                 data.feed.entry.forEach(function (data, index) {
-                    if (data.gsx$name.$t.includes(document.querySelector("#search-bar").value)) {
+                    if (data.gsx$name.$t.toLowerCase().includes(document.querySelector("#search-bar").value)) {
                         
                         // document.querySelector("#content-modal").innerHTML += data.gsx$name.$t + " - " + data.gsx$platform.$t + "<br>"
                         document.querySelector("#content-modal").innerHTML += "<tr><td>" + data.gsx$name.$t + "</td><td>" + data.gsx$platform.$t + "</td></tr>"
