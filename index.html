@@ -146,14 +146,14 @@
 
                 data.feed.entry.forEach(function (data, index) {
                     if (data.gsx$type.$t == "Concert") {
-                        document.querySelector("#tabel").innerHTML += "<tr><td>" + data.gsx$name.$t + "</td><td>" + data.gsx$platform.$t + "</td></tr>";
+                        document.querySelector("#tabel").innerHTML += "<tr><td><a href='https://www.google.com/search?q=" + data.gsx$name.$t + "' style='color:white'>" + data.gsx$name.$t + "</a></td><td>" + data.gsx$platform.$t + "</td></tr>";
                         
                     }
                 });
 
                 data.feed.entry.forEach(function (data, index) {
                     if (data.gsx$type.$t == "Movie") {
-                        document.querySelector("#tabel2").innerHTML += "<tr><td>" + data.gsx$name.$t + "</td><td>" + data.gsx$platform.$t + "</td></tr>";
+                        document.querySelector("#tabel2").innerHTML += "<tr><td><a href='https://www.google.com/search?q=" + data.gsx$name.$t + "' style='color:white'>" + data.gsx$name.$t + "</a></td><td>" + data.gsx$platform.$t + "</td></tr>";
                         
                     }
                 });
@@ -175,7 +175,7 @@
                     if (data.gsx$name.$t.toLowerCase().includes(document.querySelector("#search-bar").value)) {
                         
                         // document.querySelector("#content-modal").innerHTML += data.gsx$name.$t + " - " + data.gsx$platform.$t + "<br>"
-                        document.querySelector("#content-modal").innerHTML += "<tr><td>" + data.gsx$name.$t + "</td><td>" + data.gsx$platform.$t + "</td></tr>"
+                        document.querySelector("#content-modal").innerHTML += "<tr><td><a href='https://www.google.com/search?q=" + data.gsx$name.$t + "' style='color:white'>" + data.gsx$name.$t + "</a></td><td>" + data.gsx$platform.$t + "</td></tr>"
                     }
                 });
 
