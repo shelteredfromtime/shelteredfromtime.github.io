@@ -17,7 +17,7 @@
     <div class="container">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand">Collections</a>
+            <a class="navbar-brand">Collection</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,7 +54,7 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Collection</h1>
-                <p class="lead">Movie and Concert Collection.</p>
+                <p class="lead">The Database contains <span id="nr"></span> Movies and Concerts.</p>
             </div>
         </div>
 
@@ -157,6 +157,8 @@
                         
                     }
                 });
+
+                document.querySelector("#nr").innerHTML = data.feed.entry.length
 
             }).fail(function () {
                 console.log("An error has occurred.");
